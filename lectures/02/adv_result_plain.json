@@ -1,0 +1,54 @@
+{
+  "variant": "plain",
+  "changed": {
+    "train_file": "/content/glossary_sft.jsonl",
+    "epochs": 3,
+    "gen_tokens": 200
+  },
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 20,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 96,
+    "gen": {
+      "do_sample": false
+    }
+  },
+  "train_rows": 228,
+  "eval_rows": 124,
+  "train_seconds": 199,
+  "final_loss": 0.3948328971862793,
+  "before": {
+    "label": "before",
+    "n": 124,
+    "seen_direct_pass": "0/58",
+    "seen_direct_rate": 0.0,
+    "seen_direct_mean_sim": 0.07,
+    "seen_reworded_pass": "0/58",
+    "seen_reworded_rate": 0.0,
+    "seen_reworded_mean_sim": 0.072,
+    "unseen_pass": "0/8",
+    "unseen_rate": 0.0,
+    "seconds": 88.1
+  },
+  "after": {
+    "label": "after_plain",
+    "n": 124,
+    "seen_direct_pass": "32/58",
+    "seen_direct_rate": 0.552,
+    "seen_direct_mean_sim": 0.635,
+    "seen_reworded_pass": "29/58",
+    "seen_reworded_rate": 0.5,
+    "seen_reworded_mean_sim": 0.586,
+    "unseen_pass": "0/8",
+    "unseen_rate": 0.0,
+    "seconds": 53.2
+  },
+  "executed_training_myself": true
+}
